@@ -13,6 +13,19 @@
   border-radius: 5px;
 }
 
+.clear-search {
+  margin-left: 8px;
+  padding: 11px 14px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+.result-count {
+  color: #555;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

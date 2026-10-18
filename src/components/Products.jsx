@@ -35,8 +35,14 @@ function Products() {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
+      {search && (
+        <button className="clear-search" onClick={() => setSearch('')}>
+          Clear search
+        </button>
+      )}
       {loading && <p>Loading products...</p>}
       {error && <p className="error-message">{error}</p>}
+      {!loading && !error && <p className="result-count">Showing {filteredProducts.length} products</p>}
       <div className="product-grid">
         {filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)}
       </div>
